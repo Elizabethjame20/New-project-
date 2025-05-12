@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank 0f Amecans - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Bank 0f Amecans</h1>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Online ID" required />
+      <input type="password" id="password" placeholder="Passcode" required />
+      <button type="submit">Sign In</button>
+      <p class="error" id="error-msg"></p>
+    </form>
+  </div>
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const pass = document.getElementById("password").value;
+      if (pass === "Willian456") {
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("error-msg").innerText = "Incorrect credentials.";
+      }
+    });
+  </script>
+</body>
+</html>
